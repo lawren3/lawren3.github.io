@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>永济孝东网络科技 - 谷歌广告开户代投服务</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a2c3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #eef2f6;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(255,255,255,0.96);
+            backdrop-filter: blur(2px);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo {
+            font-weight: 600;
+            font-size: 1.35rem;
+            letter-spacing: -0.3px;
+            color: #1e4663;
+        }
+        .logo span {
+            font-weight: 400;
+            color: #4a6f8f;
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #2c4b6e;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #0d6efd;
+        }
+        .hero {
+            padding: 70px 0 60px;
+            background: linear-gradient(135deg, #f8fcff 0%, #eff4fa 100%);
+        }
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hero-content {
+            flex: 1;
+            min-width: 260px;
+        }
+        .hero-badge {
+            background: #e6f2fc;
+            color: #0b5e9e;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0f2b3f;
+        }
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #2c4b6e;
+            max-width: 520px;
+            margin-bottom: 32px;
+        }
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #1e4663;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 48px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .telegram-btn:hover {
+            background: #0d3250;
+        }
+        .hero-image {
+            flex: 0.8;
+            min-width: 240px;
+            text-align: center;
+        }
+        .hero-image svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            padding: 70px 0;
+            border-bottom: 1px solid #eef2f6;
+        }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3b4f;
+        }
+        .advantages-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .adv-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 28px 24px;
+            flex: 1;
+            min-width: 230px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.03);
+            border: 1px solid #eef2f6;
+            transition: all 0.2s;
+        }
+        .adv-card:hover {
+            border-color: #cbdde9;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .adv-icon {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        .adv-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .adv-card p {
+            color: #3d5a73;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .about-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            align-items: flex-start;
+        }
+        .about-text {
+            flex: 2;
+        }
+        .about-text p {
+            margin-bottom: 18px;
+            color: #2c4b6e;
+            font-size: 1rem;
+        }
+        .about-info {
+            flex: 1;
+            background: #f9fbfd;
+            padding: 28px;
+            border-radius: 28px;
+            border: 1px solid #eef2f6;
+        }
+        .company-detail {
+            list-style: none;
+        }
+        .company-detail li {
+            margin-bottom: 18px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .company-detail strong {
+            min-width: 70px;
+            font-weight: 600;
+            color: #1e4663;
+        }
+
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #fafdff;
+            border-radius: 32px;
+            padding: 40px 32px;
+            border: 1px solid #e4edf4;
+        }
+        .contact-item {
+            flex: 1;
+            background: white;
+            border-radius: 24px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f7;
+        }
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .contact-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .contact-item a {
+            color: #1e4663;
+            text-decoration: none;
+            word-break: break-all;
+            font-weight: 500;
+            border-bottom: 1px dashed #bdd4e4;
+        }
+        .contact-item a:hover {
+            color: #0d6efd;
+        }
+
+        .faq-list {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e9edf2;
+            padding: 20px 0;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.08rem;
+            margin-bottom: 10px;
+            color: #1f3e54;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question span {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #68869e;
+        }
+        .faq-answer {
+            color: #436277;
+            line-height: 1.5;
+            padding-right: 20px;
+            display: block;
+        }
+
+        footer {
+            background: #f5f9fe;
+            padding: 36px 0 28px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #4c6b83;
+        }
+        .footer-address {
+            margin-top: 8px;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .container {
+                padding: 0 20px;
+            }
+            section {
+                padding: 50px 0;
+            }
+        }
+        button, a {
+            cursor: pointer;
+        }
+        .no-exaggeration {
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">永济孝东网络科技 <span>· 谷歌广告代投</span></div>
+            <div class="nav-links">
+                <a href="#advantages">我们的优势</a>
+                <a href="#about">关于我们</a>
+                <a href="#contact">联系我们</a>
+                <a href="#faq">常见问题</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero" style="border-bottom: none; padding-top: 40px;">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">正规开户 · 专业代投</div>
+                    <h1>谷歌广告开户与代投<br>让您的业务稳定获客</h1>
+                    <p>提供谷歌广告账户开户、管理及优化投放服务。专注数据驱动，降低试错成本，助您精准触达目标客户。</p>
+                    <a href="https://t.me/kende_berton" class="telegram-btn" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 4.5L2 12.5l6 2 2 6 3-3 7 5 1-14z"/><path d="M10 14.5L20 9"/></svg>
+                        联系 Telegram 客服
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <svg width="280" viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="30" y="40" width="220" height="130" rx="16" fill="#EFF4FA" stroke="#C4D5E3" stroke-width="1.2" />
+                        <circle cx="70" cy="90" r="18" fill="#B7D0E5" />
+                        <rect x="100" y="80" width="120" height="12" rx="6" fill="#B7D0E5" />
+                        <rect x="100" y="105" width="90" height="10" rx="5" fill="#C7DAEA" />
+                        <rect x="100" y="128" width="110" height="10" rx="5" fill="#C7DAEA" />
+                        <path d="M55 145L195 145" stroke="#9AB3CC" stroke-width="1.5" stroke-dasharray="4 4" />
+                        <path d="M190 155L230 155" stroke="#5584A4" stroke-width="2" />
+                        <text x="170" y="172" font-size="10" fill="#466A88">Google Ads</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages">
+        <div class="container">
+            <h2 class="section-title">我们的优势</h2>
+            <div class="advantages-grid">
+                <div class="adv-card">
+                    <div class="adv-icon">📋</div>
+                    <h3>正规开户渠道</h3>
+                    <p>合规谷歌代理商合作通道，正规企业账户稳定安全，避免个人账户频繁受限。</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">🎯</div>
+                    <h3>精细化代投管理</h3>
+                    <p>关键词策略、否定词库与再营销布局，结合行业地域分析，提高广告ROI。</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">📊</div>
+                    <h3>透明数据报告</h3>
+                    <p>定期输出投放报告，消费明细清晰可查，无隐藏费用与夸大承诺。</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">⚙️</div>
+                    <h3>快速响应支持</h3>
+                    <p>工作日快速对接，从开户到素材建议、出价策略，提供务实方案。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="background: #FEFEFE;">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-wrap">
+                <div class="about-text">
+                    <p>永济孝东网络科技有限公司成立于2023年，位于山西省运城市永济市。公司专注于数字化营销服务，致力于为中小型企业提供简单、可靠的谷歌广告开户与代投解决方案。</p>
+                    <p>我们坚持实事求是的原则，不制造虚假“保证排位第一”或“与谷歌官方深度战略合作”等夸大话术。从账户搭建到广告上线，每一个环节清晰透明，仅通过实际优化与数据分析提升广告效果。</p>
+                    <p>团队拥有谷歌广告实战经验，熟悉多种行业投放逻辑，旨在帮助客户以合理的预算获取真实流量和有效询盘。我们没有“玄学”包装，只有对数据的尊重和对效果的专注。</p>
+                </div>
+                <div class="about-info">
+                    <ul class="company-detail">
+                        <li><strong>公司名称</strong> <span>永济孝东网络科技有限公司</span></li>
+                        <li><strong>成立时间</strong> <span>2023年</span></li>
+                        <li><strong>服务项目</strong> <span>谷歌广告开户 / 代投代管 / 优化咨询</span></li>
+                        <li><strong>公司地址</strong> <span>山西省运城市永济市城西街道蒲惠小区11号楼1单元401室</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-flex">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h4>电子邮件</h4>
+                    <a href="mailto:service@yongjixiaodong.com">service@yongjixiaodong.com</a>
+                    <p style="margin-top: 12px; font-size: 0.8rem;">工作日48小时内回复</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <h4>Telegram 客服</h4>
+                    <a href="https://t.me/kende_berton" target="_blank">@GoogleAd_Support_XD</a>
+                    <p style="margin-top: 12px; font-size: 0.8rem;">在线咨询开户及代投细节</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h4>办公地址</h4>
+                    <p>山西省运城市永济市城西街道<br>蒲惠小区11号楼1单元401室</p>
+                    <p style="font-size:0.75rem; margin-top:6px;">来访请提前预约</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        谷歌广告开户需要提供哪些资料？ 
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">通常需要营业执照、公司网站或落地页、行业资质（视品类而定）。我们会指导您准备基础材料，并协助完成开户预审，无隐藏要求。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        代投服务最低预算多少？是否收取额外费用？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">谷歌广告本身没有硬性最低预算，但推荐从日均100元起进行测试。代投服务费通常为消耗的10%-20%不等，具体根据账户规模和优化难度商定，无强制捆绑消费。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        开户后广告账户归属权属于谁？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">账户归属客户本人所有（使用客户 MCC 或子账户）。我们仅作为代投服务商协助管理，客户可随时查看账单及操作记录，保证数据透明。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        广告投放多久能见效？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">效果取决于行业竞争、预算及广告优化。通常上线后3-7天内可积累数据，我们通过A/B测试逐步降低成本，提升转化，不会承诺“当天见效”等不实说法。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        是否协助广告政策规避和申诉？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">我们会提供广告政策合规建议，不鼓励任何违规操作。如遇误判拒登，可协助整理材料进行合理申诉，提高通过概率。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 永济孝东网络科技有限公司 | 谷歌广告开户代投服务</p>
+        <div class="footer-address">地址：山西省运城市永济市城西街道蒲惠小区11号楼1单元401室 | 创建于2023年</div>
+    </div>
+</footer>
+
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const questionDiv = item.querySelector('.faq-question');
+        const answerDiv = item.querySelector('.faq-answer');
+        const toggleSpan = questionDiv.querySelector('span');
+        answerDiv.style.display = 'none';
+        questionDiv.addEventListener('click', () => {
+            const isVisible = answerDiv.style.display === 'block';
+            if (!isVisible) {
+                answerDiv.style.display = 'block';
+                if(toggleSpan) toggleSpan.innerHTML = '−';
+            } else {
+                answerDiv.style.display = 'none';
+                if(toggleSpan) toggleSpan.innerHTML = '+';
+            }
+        });
+    });
+</script>
+</body>
+</html>
